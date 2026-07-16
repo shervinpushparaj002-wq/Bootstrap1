@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Modern Bootstrap Website</title>
+
+
+<link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+rel="stylesheet">
+
+
+<link 
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #fff7cc,
+        #f3e8ff,
+        #ddd6fe
+    );
+
+    color:#333;
+
+}
+
+
+
+
+.text-white h2{
+    color:black;
+}
+
+.navbar{
+
+    background:rgba(255,255,255,0.75)!important;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.12);
+
+    padding:18px 40px;
+
+}
+
+
+
+.navbar-brand{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#7c3aed!important;
+
+    letter-spacing:1px;
+
+}
+
+
+
+.nav-link{
+
+    color:#4b0082!important;
+
+    font-weight:600;
+
+    margin:0 10px;
+
+    transition:.3s;
+
+}
+
+
+.nav-link:hover{
+
+    color:#f59e0b!important;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+
+.sum{
+
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    rgba(255,247,204,.9),
+    rgba(216,195,255,.9)
+    );
+
+
+    padding:80px 40px;
+
+}
+
+
+
+.container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:50px;
+    color:rgb(64, 61, 61) ;
+
+}
+
+
+
+
+.text h1{
+
+
+    font-size:65px;
+
+    font-weight:800;
+
+    color:#6d28d9;
+
+    margin-bottom:20px;
+
+
+}
+
+
+.text p{
+
+
+    font-size:18px;
+
+    line-height:32px;
+
+    color:#555;
+
+    max-width:550px;
+
+
+}
+
+
+
+
+
+
+
+.btn{
+
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-right:10px;
+
+    transition:.4s;
+
+}
+
+
+
+.btn-primary{
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #7c3aed,
+    #c084fc
+    );
+
+    border:none;
+
+    color:white;
+
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(124,58,237,.4);
+
+}
+
+
+
+.btn-secondary{
+
+
+    background:#fff;
+
+    color:#7c3aed;
+
+    border:none;
+
+
+}
+
+
+.btn-secondary:hover{
+
+
+    background:#fef3c7;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+ .text-white p{
+    color:black;
+ }
+/* ===== HERO IMAGE ===== */
+
+
+.p-2 img{
+
+
+    width:430px;
+
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:50px;
+
+
+    border:8px solid rgba(255,255,255,.6);
+
+
+    box-shadow:
+
+    0 25px 50px rgba(0,0,0,.2);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.p-2 img:hover{
+
+
+    transform:scale(1.05)
+    rotate(2deg);
+
+
+}
+
+
+
+
+/* ===== COMMON CARD DESIGN ===== */
+
+
+.card,
+.book,
+form{
+
+
+    background:
+
+    rgba(255,255,255,.75);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.12);
+
+
+}
+
+footer{
+    text-align: center;
+    
+}
+
+.code a{
+    text-decoration: none;
+padding-left: 50px;
+    color: #7c3aed;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+
+@media(max-width:992px){
+
+
+.container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.text h1{
+
+    font-size:45px;
+
+}
+
+
+.p-2 img{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+
+.navbar{
+
+    padding:15px;
+
+}
+
+
+
+}
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+
+<header>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container-fluid">
+
+
+<a class="navbar-brand" href="#">
+    <i class="fa-solid fa-gem"></i>
+    Shervin
+</a>
+
+
+
+<button 
+class="navbar-toggler" 
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+
+<ul class="navbar-nav ms-auto">
+
+
+<li class="nav-item">
+<a class="nav-link" href="#home">
+Home
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="#about">
+About
+</a>
+</li>
+
+
+
+<li class="nav-item">
+<a class="nav-link" href="#product">
+Products
+</a>
+</li>
+
+
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+</div>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<!-- ================= HERO SECTION ================= -->
+
+
+<section class="sum" id="home">
+
+
+<div class="container">
+
+
+<div class="text">
+
+
+<h1>
+Create Your 
+<br>
+Digital Future
+</h1>
+
+
+
+<p>
+
+A modern professional website design 
+with elegant UI, smooth animations and 
+beautiful gradient colors to give your 
+business a premium experience.
+
+</p>
+
+
+
+<div class="btn">
+
+
+<button class="btn btn-primary">
+
+Explore More
+
+</button>
+
+
+
+<button class="btn btn-secondary">
+
+Learn More
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="p-2">
+
+
+<img 
+
+src="https://images.unsplash.com/photo-1526779259212-939e64788e3c"
+
+alt="Modern Design Image">
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= ABOUT SECTION ================= -->
+
+
+
+<section id="about" class="py-5">
+
+
+<div class="container">
+
+
+<div class="book p-5 text-center">
+
+
+<h2 class="fw-bold text-purple">
+
+About Our Website
+
+</h2>
+
+
+
+<p class="mt-3">
+
+Working with modern web technologies 
+helps create beautiful, responsive and 
+user-friendly websites. Our designs 
+combine creativity with professional 
+development.
+
+</p>
+
+
+
+<h6 class="mt-4">
+
+<i class="fa-regular fa-comment-dots"></i>
+
+Tom Ato / CEO, Pomodoro
+
+</h6>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= BLOG CARD SECTION ================= -->
+
+
+
+<section id="product" class="py-5">
+
+
+<div class="container d-block">
+
+
+<h1 class="text-center fw-bold mb-3">
+
+Latest Updates
+
+</h1>
+
+
+
+<p class="text-center mb-5">
+
+Explore our latest articles and creative ideas.
+
+</p>
+
+
+
+
+
+<div class="row g-4">
+
+
+
+<!-- CARD 1 -->
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="card h-100">
+
+
+<img 
+src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+class="card-img-top">
+
+
+
+<div class="card-body">
+
+
+<h4 class="card-title">
+
+Web Development
+
+</h4>
+
+
+
+<p>
+
+Learn modern technologies and build 
+professional websites easily.
+
+</p>
+
+
+
+<h6>
+
+<i class="fa-regular fa-user"></i>
+
+Kelly Rowan
+
+</h6>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- CARD 2 -->
+
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="card h-100">
+
+
+<img 
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+class="card-img-top">
+
+
+<div class="card-body">
+
+
+<h4 class="card-title">
+
+UI Design
+
+</h4>
+
+
+<p>
+
+Create attractive interfaces with 
+modern design concepts.
+
+</p>
+
+
+<h6>
+
+<i class="fa-regular fa-user"></i>
+
+Josiah Barclay
+
+</h6>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- CARD 3 -->
+
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="card h-100">
+
+
+
+<img 
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+class="card-img-top">
+
+
+<div class="card-body">
+
+
+<h4 class="card-title">
+
+Creative Ideas
+
+</h4>
+
+
+<p>
+
+Transform your ideas into powerful 
+digital solutions.
+
+</p>
+
+
+<h6>
+
+<i class="fa-regular fa-user"></i>
+
+Evelyn Martinez
+
+</h6>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<!-- ================= CONTACT SECTION ================= -->
+
+
+<section id="contact" class="py-5">
+
+
+<div class="container">
+
+
+<div class="row justify-content-center">
+
+
+<div class="col-lg-10">
+
+
+<form class="p-5">
+
+
+<h2 class="text-center fw-bold mb-4">
+
+Contact Us
+
+</h2>
+
+
+
+<div class="row g-4">
+
+
+
+<div class="col-md-6">
+
+<label class="form-label">
+Email
+</label>
+
+<input 
+type="email"
+class="form-control"
+placeholder="Enter your email">
+
+
+</div>
+
+
+
+
+<div class="col-md-6">
+
+
+<label class="form-label">
+Password
+</label>
+
+
+<input 
+type="password"
+class="form-control"
+placeholder="Enter password">
+
+
+</div>
+
+
+
+
+
+<div class="col-12">
+
+
+<label class="form-label">
+Address
+</label>
+
+
+<input 
+type="text"
+class="form-control"
+placeholder="Enter your address">
+
+
+</div>
+
+
+
+
+
+<div class="col-md-6">
+
+
+<label class="form-label">
+City
+</label>
+
+
+<input 
+type="text"
+class="form-control"
+placeholder="City">
+
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+
+<label class="form-label">
+State
+</label>
+
+
+<select class="form-select">
+
+
+<option selected>
+Choose State
+</option>
+
+
+<option>
+Tamil Nadu
+</option>
+
+
+<option>
+Kerala
+</option>
+
+
+<option>
+Karnataka
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-2">
+
+
+<label class="form-label">
+Pin
+</label>
+
+
+<input 
+type="text"
+class="form-control"
+placeholder="600001">
+
+
+</div>
+
+
+
+
+
+
+<div class="col-12">
+
+
+<div class="form-check">
+
+
+<input 
+class="form-check-input"
+type="checkbox">
+
+
+<label class="form-check-label">
+
+I agree with terms and conditions
+
+</label>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-12 text-center">
+
+
+<button class="btn btn-primary px-5">
+
+Submit
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= NEWSLETTER SECTION ================= -->
+
+
+
+<section class="sum">
+
+
+<div class="container">
+
+
+<div class="text-white">
+
+
+<h2>
+
+New Products Delivered To You
+
+</h2>
+
+
+<p>
+
+Subscribe for latest updates and offers.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<div class="input-group">
+
+
+<input 
+type="email"
+class="form-control"
+placeholder="Enter email">
+
+
+
+<button class="btn btn-primary">
+
+Subscribe
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+
+<footer>
+
+
+<div class="refer">
+
+
+<div>
+
+
+<h5>
+
+Shervin Website
+
+</h5>
+
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="code">
+
+
+<a href="#">
+
+Privacy
+
+</a>
+
+
+
+<a href="#">
+
+Terms
+
+</a>
+
+
+
+<a href="#contact">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+<!-- Bootstrap Javascript -->
+
+
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+</body>
+
+</html>
